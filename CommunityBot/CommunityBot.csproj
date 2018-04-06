@@ -152,6 +152,7 @@
     <Compile Include="Modules\Basics.cs" />
     <Compile Include="Modules\Blogs.cs" />
     <Compile Include="Modules\Economy.cs" />
+    <Compile Include="Modules\UserInfo.cs" />
     <Compile Include="Modules\Voice.cs" />
     <Compile Include="Modules\Misc.cs" />
     <Compile Include="Preconditions\Cooldown.cs" />
