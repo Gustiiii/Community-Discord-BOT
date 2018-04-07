@@ -9,16 +9,19 @@ using System.Threading.Tasks;
 
 namespace CommunityBot.Modules
 {
-   public class Userinfo : ModuleBase<SocketCommandContext>
+
+    public class Userinfo : ModuleBase<SocketCommandContext>
     {
+       
 
         [Command("info")]
         [Summary("Getting info for a user")]
         [Alias("Whois")]
         public async Task UserInfo(IGuildUser user)
         {
+            { 
 
-            {
+            
                 var embed = new EmbedBuilder();
                 embed.WithThumbnailUrl(user.GetAvatarUrl());
                 if (user.Status == UserStatus.Online)
@@ -47,7 +50,7 @@ namespace CommunityBot.Modules
                 }
 
                 var username = user.Nickname ?? user.Username;
-               string game = user.Game.ToString();
+                string game = user.Game.ToString();
 
                 if (string.IsNullOrEmpty(game))
                 {
@@ -65,5 +68,4 @@ namespace CommunityBot.Modules
 
         }
     }
-}
 }
